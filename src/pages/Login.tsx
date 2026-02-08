@@ -1,13 +1,12 @@
 import { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
-import { Mail, Lock, Eye, EyeOff } from 'lucide-react';
+import { Calendar, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 
 export function Login() {
   const { signIn } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const [isLogin, setIsLogin] = useState(true);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [showPassword, setShowPassword] = useState(false);
@@ -37,23 +36,30 @@ export function Login() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full">
+  <div
+    className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('https://www.acethehimalaya.com/wp-content/uploads/2019/04/ebc-trek-in-may.jpg')",
+    }}
+  >
+    {/* Dark overlay for readability */}
+    <div className="absolute inset-0 bg-black/40"></div>
+
+    <div className="max-w-md w-full relative z-10">
         {/* Logo and Title */}
         <div className="text-center mb-8">
           <Link to="/" className="inline-flex items-center space-x-2 group mb-6">
-            <img src="../public/Screenshot 2026-02-06 114953.png" alt="Logo" className="h-16 w-17 rounded-full object-cover" />
+            <img src="../public/Screenshot 2026-02-06 114953.png" alt="Logo" className="h-16 w-15 rounded-full object-cover" />
             <span className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
               Evenza
             </span>
           </Link>
           <h2 className="text-3xl font-bold text-gray-900 mb-2">
-            {isLogin ? 'Welcome Back' : 'Create Account'}
+            Welcome Back
           </h2>
           <p className="text-gray-600">
-            {isLogin
-              ? 'Sign in to access your bookings'
-              : 'Sign up to start booking events'}
+            Sign in to access your bookings
           </p>
         </div>
 
@@ -122,12 +128,10 @@ export function Login() {
               {loading ? (
                 <div className="flex items-center justify-center">
                   <div className="animate-spin rounded-full h-5 w-5 border-b-2 border-white mr-3"></div>
-                  {isLogin ? 'Signing In...' : 'Creating Account...'}
+                  Signing In...
                 </div>
-              ) : isLogin ? (
-                'Sign In'
               ) : (
-                'Create Account'
+                'Sign In'
               )}
             </button>
           </form>
@@ -135,12 +139,12 @@ export function Login() {
           {/* Toggle Login/Register */}
           <div className="mt-6 text-center">
             <p className="text-gray-600">
-              {isLogin ? "Don't have an account?" : 'Already have an account?'}{' '}
+              Don't have an account?{' '}
               <Link
                 to="/register"
                 className="text-teal-600 font-semibold hover:text-teal-700"
               >
-                {isLogin ? 'Sign Up' : 'Sign In'}
+                Sign Up
               </Link>
             </p>
           </div>
@@ -149,7 +153,7 @@ export function Login() {
         {/* Demo Credentials */}
         <div className="mt-6 bg-gray-50 rounded-lg p-4">
           <p className="text-xs text-gray-600 text-center">
-            Demo: test@evenza.com / password123
+
           </p>
         </div>
       </div>

@@ -36,15 +36,26 @@ export function Categories() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Event Categories</h1>
-          <p className="text-xl text-white/90">
-            Explore events by category and find what interests you most
-          </p>
-        </div>
-      </div>
+   <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+     <div
+  className="relative bg-cover bg-center text-white py-24"
+  style={{
+    backgroundImage:
+      "url('https://www.convergence-now.com/wp-content/uploads/2026/01/HERO-IMAGE-Tech-Events.png')",
+  }}
+>
+  {/* Overlay for readability */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      Event Categories
+    </h1>
+    <p className="text-xl text-white/90">
+      Explore events by category and find what interests you most
+    </p>
+  </div>
+</div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         {categories.length > 0 ? (

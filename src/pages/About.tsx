@@ -29,24 +29,35 @@ export function About() {
   ];
 
   const stats = [
-    { value: '10,000+', label: 'Events Hosted' },
-    { value: '50,000+', label: 'Happy Users' },
-    { value: '100+', label: 'Cities Covered' },
+    { value: '10+', label: 'Events Hosted' },
+    { value: '50+', label: 'Happy Users' },
+    { value: '10+', label: 'Cities Covered' },
     { value: '4.8/5', label: 'User Rating' },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">About Evenza</h1>
-          <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
-            Nepal's leading event discovery and booking platform, connecting people with
-            unforgettable experiences since 2024.
-          </p>
-        </div>
-      </div>
+      <section
+    className="relative bg-cover bg-center text-white py-20"
+    style={{
+      backgroundImage:
+        "url('https://annapurnaexpress.prixacdn.net/media/albums/audience_q2vfnjd6VG.jpg')",
+    }}
+  >
+    {/* Overlay */}
+    <div className="absolute inset-0 bg-black/50"></div>
+
+    <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h1 className="text-4xl md:text-6xl font-bold mb-6">
+        About Evenza
+      </h1>
+      <p className="text-xl md:text-2xl text-white/90 max-w-3xl">
+        Nepal's leading event discovery and booking platform, connecting people with
+        unforgettable experiences since 2026.
+    </p>
+  </div>
+</section>
 
       {/* Story Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
@@ -74,7 +85,7 @@ export function About() {
           </div>
           <div className="relative">
             <img
-              src="https://images.pexels.com/photos/1105666/pexels-photo-1105666.jpeg"
+              src="https://assets-cdn.kantipurdaily.com/uploads/source/news/kantipur/2024/third-party/concert-10-14122024041932-1000x0.jpg"
               alt="Events"
               className="rounded-2xl shadow-2xl"
             />

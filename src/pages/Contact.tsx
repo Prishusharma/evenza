@@ -23,7 +23,7 @@ export function Contact() {
     {
       icon: MapPin,
       title: 'Address',
-      content: 'Thamel, Kathmandu 44600, Nepal',
+      content: 'Chabahil, Kathmandu 44600, Nepal',
     },
     {
       icon: Phone,
@@ -33,7 +33,7 @@ export function Contact() {
     {
       icon: Mail,
       title: 'Email',
-      content: 'info@evenza.com.np',
+      content: 'evenzainfo@.com.np',
     },
     {
       icon: Clock,
@@ -87,7 +87,7 @@ export function Contact() {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                    placeholder="John Doe"
+                    placeholder="Sony Pandey"
                   />
                 </div>
 
@@ -105,7 +105,7 @@ export function Contact() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 focus:border-transparent"
-                    placeholder="john@example.com"
+                    placeholder="hii@example.com"
                   />
                 </div>
 
@@ -191,11 +191,17 @@ export function Contact() {
             </div>
 
             {/* Map Placeholder */}
-            <div className="bg-gray-200 rounded-2xl overflow-hidden shadow-lg">
-              <div className="h-64 flex items-center justify-center">
-                <MapPin className="w-16 h-16 text-gray-400" />
-              </div>
-            </div>
+                  <div className="rounded-2xl overflow-hidden shadow-lg">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14128.096058794943!2d85.34925340000001!3d27.716544800000015!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb197d9d23f7ed%3A0x2724281b4393865d!2sChabahil%2C%20Kathmandu%2044600!5e0!3m2!1sen!2snp!4v1770461907789!5m2!1sen!2snp"
+            width="100%"
+            height="400"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
           </div>
         </div>
 

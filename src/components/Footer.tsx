@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Calendar, Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
+import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -11,7 +11,7 @@ export function Footer() {
           {/* Brand Section */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2 group">
-              <Calendar className="w-8 h-8 text-teal-400 group-hover:rotate-12 transition-transform duration-300" />
+               <img src="../public/Screenshot 2026-02-06 114953.png" alt="Logo" className="h-16 w-15 rounded-full object-cover" />
               <span className="text-2xl font-bold text-white">Evenza</span>
             </Link>
             <p className="text-sm text-gray-400">
@@ -105,15 +105,15 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start space-x-2 text-sm">
                 <MapPin className="w-4 h-4 mt-0.5 flex-shrink-0 text-teal-400" />
-                <span>Thamel, Kathmandu, Nepal</span>
+                <span>Chabahil, Kathmandu, Nepal</span>
               </li>
               <li className="flex items-center space-x-2 text-sm">
                 <Phone className="w-4 h-4 flex-shrink-0 text-teal-400" />
-                <span>+977 1-4441234</span>
+                <span>+977 9876540347</span>
               </li>
               <li className="flex items-center space-x-2 text-sm">
                 <Mail className="w-4 h-4 flex-shrink-0 text-teal-400" />
-                <span>info@evenza.com.np</span>
+                <span>evenzao@info.com.np</span>
               </li>
             </ul>
           </div>

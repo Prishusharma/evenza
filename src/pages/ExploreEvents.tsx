@@ -91,15 +91,26 @@ export function ExploreEvents() {
   const hasActiveFilters = selectedCategory || selectedDate || availabilityFilter !== 'all' || searchQuery;
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
-      <div className="bg-gradient-to-r from-teal-600 to-cyan-600 text-white py-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Explore Events</h1>
-          <p className="text-xl text-white/90">
-            Discover amazing events happening across Nepal
-          </p>
-        </div>
-      </div>
+   <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+     <div
+  className="relative bg-cover bg-center text-white py-24"
+  style={{
+    backgroundImage:
+      "url('https://assets-api.kathmandupost.com/thumb.php?src=https://assets-cdn.kathmandupost.com/uploads/source/news/2016/others/21062016084332Paragliding.jpg&w=900&height=601')",
+  }}
+>
+  {/* Overlay for better readability */}
+  <div className="absolute inset-0 bg-black/50"></div>
+
+  <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h1 className="text-4xl md:text-5xl font-bold mb-4">
+      Explore Events
+    </h1>
+    <p className="text-xl text-white/90">
+      Discover amazing events happening across Nepal
+    </p>
+  </div>
+</div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="flex flex-col lg:flex-row gap-8">

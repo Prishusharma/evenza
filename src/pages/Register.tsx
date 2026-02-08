@@ -62,23 +62,32 @@ export function Register() {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-teal-50 via-white to-cyan-50 flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-md w-full">
-        {/* Logo and Title */}
-        <div className="text-center mb-8">
-          <Link to="/" className="inline-flex items-center space-x-2 group mb-6">
-            <Calendar className="w-12 h-12 text-teal-600 group-hover:rotate-12 transition-transform duration-300" />
-            <span className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
-              Evenza
-            </span>
-          </Link>
-          <h2 className="text-3xl font-bold text-gray-900 mb-2">Create Account</h2>
-          <p className="text-gray-600">Sign up to start booking amazing events</p>
-        </div>
+return (
+  <div
+    className="min-h-screen flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8 relative bg-cover bg-center"
+    style={{
+      backgroundImage:
+        "url('https://www.acethehimalaya.com/wp-content/uploads/2019/04/ebc-trek-in-may.jpg')",
+    }}
+  >
+    {/* Dark overlay for readability */}
+    <div className="absolute inset-0 bg-black/40"></div>
 
-        {/* Register Form */}
-        <div className="bg-white rounded-2xl shadow-2xl p-8">
+    <div className="max-w-md w-full relative z-10">
+      {/* Logo and Title */}
+      <div className="text-center mb-8">
+        <Link to="/" className="inline-flex items-center space-x-2 group mb-6">
+        <img src="../public/Screenshot 2026-02-06 114953.png" alt="Logo" className="h-16 w-15 rounded-full object-cover" />
+          <span className="text-3xl font-bold bg-gradient-to-r from-teal-600 to-cyan-600 bg-clip-text text-transparent">
+            Evenza
+          </span>
+        </Link>
+        <h2 className="text-3xl font-bold text-white mb-2">Create Account</h2>
+        <p className="text-white/90">Sign up to start booking amazing events</p>
+      </div>
+
+      {/* Register Form */}
+      <div className="bg-white rounded-2xl shadow-2xl p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             {/* Email Field */}
             <div>
